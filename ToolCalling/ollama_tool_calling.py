@@ -4,15 +4,17 @@ from pprint import pprint
 import tool_list
 from function_schematizer import ToolChain
 
-MODEL_NAME = 'llama3.1:70b'
+MODEL_NAME = 'llama3.2'
 
 tool_chain = ToolChain()
 tool_chain.add_module(tool_list)
 
-message_history = [{
-    'role': 'user',
-    'content': 'I am in Toronto. Is there anything worth seeing here today?'
-}]
+message_history = [
+    {
+        'role': 'user',
+        'content': 'Which city in Sweden has the best air quality today?'
+    }
+]
 
 while True:
     response = ollama.chat(
@@ -33,8 +35,12 @@ while True:
         result = tool_chain.call(name, args)
         message_history.append({
             'role': 'tool',
-            'content': result,
+            'content': str(result),
         })
 
+    break
 
-pprint(message_history)
+print(message_history)
+for message in message_history:
+    print(message['content'])
+
