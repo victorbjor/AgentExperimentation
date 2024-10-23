@@ -38,9 +38,6 @@ while True:
             'content': str(result),
         })
 
-    break
-
-print(message_history)
 for message in message_history:
     print(message['content'])
 
