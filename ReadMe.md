@@ -23,3 +23,17 @@ tool_chain.add_module(tool_list)
 
 # Make sure to use type hints and docstrings for the agent to be able to understand them
 ```
+
+# Workshop
+
+Look through the different directories and get inspired by the examples
+
+Then choose your own project and implement it!
+
+
+### Topic Suggestions:
+
+- Refine answer by asking the user to clarify what they need.
+- Solve math problems by giving the agent a calculator tool and step by step reasoning.
+- Make a bot that translates text and then iteratively improves it.
+- Give the bot access to your API of choice.
