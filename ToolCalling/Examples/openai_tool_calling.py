@@ -2,7 +2,7 @@ import json
 from openai import OpenAI
 
 import tool_list
-from function_schematizer import ToolChain
+from Lib.function_schematizer import ToolChain
 
 # Open AI
 client = OpenAI()
@@ -11,10 +11,16 @@ MODEL_NAME='gpt-4o-mini'
 tool_chain = ToolChain()
 tool_chain.add_module(tool_list)
 
+# message_history = [
+#     {
+#         'role': 'user',
+#         'content': 'Should I go to Skövde or Örebro today if I want some sun?'
+#     }
+# ]
 message_history = [
     {
         'role': 'user',
-        'content': 'Should I go to Skövde or Örebro today if I want some sun?'
+        'content': 'Which city in Sweden has the best air quality today? Plan out your tool calling in advance, and state which tools you need to call, and in which order.'
     }
 ]
 

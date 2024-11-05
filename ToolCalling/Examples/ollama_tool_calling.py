@@ -2,9 +2,9 @@ import ollama
 from pprint import pprint
 
 import tool_list
-from function_schematizer import ToolChain
+from Lib.function_schematizer import ToolChain
 
-MODEL_NAME = 'llama3.2'
+MODEL_NAME = 'llama3.1:70b'
 
 tool_chain = ToolChain()
 tool_chain.add_module(tool_list)
@@ -12,7 +12,7 @@ tool_chain.add_module(tool_list)
 message_history = [
     {
         'role': 'user',
-        'content': 'Which city in Sweden has the best air quality today?'
+        'content': 'Which city in Sweden has the best air quality today? Plan out your tool calling in advance, and state which tools you need to call, and in which order.'
     }
 ]
 

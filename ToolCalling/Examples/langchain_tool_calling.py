@@ -6,7 +6,7 @@ from langchain_core.tools import tool
 from langchain_ollama import ChatOllama
 
 import tool_list
-from function_schematizer import ToolChain
+from Lib.function_schematizer import ToolChain
 
 tool_chain = ToolChain()
 tool_chain.add_module(tool_list)
