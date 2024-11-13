@@ -4,7 +4,7 @@ from pprint import pprint
 import tool_list
 from Lib.function_schematizer import ToolChain
 
-MODEL_NAME = 'llama3.1:70b'
+MODEL_NAME = 'llama3.2:latest'
 
 tool_chain = ToolChain()
 tool_chain.add_module(tool_list)
@@ -12,12 +12,14 @@ tool_chain.add_module(tool_list)
 message_history = [
     {
         'role': 'user',
-        'content': 'Which city in Sweden has the best air quality today? Plan out your tool calling in advance, and state which tools you need to call, and in which order.'
+        'content': 'How are you feeling?'
     }
 ]
 
+client = ollama.Client(host='192.168.100.44')
+
 while True:
-    response = ollama.chat(
+    response = client.chat(
         model=MODEL_NAME,
         messages=message_history,
         tools=tool_chain.schemata,
