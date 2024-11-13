@@ -24,6 +24,13 @@ tool_chain.add_module(tool_list)
 # Make sure to use type hints and docstrings for the agent to be able to understand them
 ```
 
+#### Examples of tools to try
+- API calls
+- Calculator
+- Pass the user to someone else
+- `import playwright`
+
+
 # Workshop
 
 Look through the different directories and get inspired by the examples
@@ -34,6 +41,7 @@ Then choose your own project and implement it!
 ### Topic Suggestions:
 
 - Refine answer by asking the user to clarify what they need.
-- Solve math problems by giving the agent a calculator tool and step by step reasoning.
+- Solve math problems by giving the agent a calculator tool and maybe some step by step reasoning.
 - Make a bot that translates text and then iteratively improves it.
 - Give the bot access to your API of choice.
+- `import playwright` and let the LLM control a web page
