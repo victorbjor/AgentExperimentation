@@ -4,6 +4,7 @@ def test_func(param1: str, param2: str) -> int:
     """Just a silly test function"""
     return 5
 
+
 def get_todays_date() -> str:
     """
     Get todays date
@@ -12,6 +13,7 @@ def get_todays_date() -> str:
     """
     from datetime import datetime
     return datetime.today().strftime("%Y-%m-%d")
+
 
 def get_current_weather(city: str, date: str, private_key: str) -> str:
     """Fetches current whether from API

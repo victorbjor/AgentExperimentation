@@ -3,8 +3,6 @@ import json
 from pprint import pprint
 from typing import List, Dict
 
-from ToolCalling import tool_list
-
 
 class ToolChain:
     def __init__(self):
@@ -180,6 +178,7 @@ if __name__ == "__main__":
 
     #### NEW
     tool_chain = ToolChain()
+    from ToolCalling.Examples import tool_list
     tool_chain.add_module(tool_list)
     # tool_chain.pprint()
     tool_chain.call('private_api_key')
