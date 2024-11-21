@@ -3,3 +3,7 @@ langchain
 openai
 pydantic
 instructor
+diffusers
+accelerate
+sentencepiece
+peft
