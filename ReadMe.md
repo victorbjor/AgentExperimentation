@@ -11,6 +11,7 @@
 3. Install PyTorch for your system. https://pytorch.org/get-started/locally/
 4. Pull this repo.
    1. Run `pip install -e .` in the root directory of the repo.
+   2. If you run into problems add the repo root dir to `PYTHONPATH`.
 
 ### Tool Calling
 There are examples of how to use this in `/ToolCalling/Examples/`

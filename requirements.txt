@@ -7,3 +7,6 @@ diffusers
 accelerate
 sentencepiece
 peft
+plotly
+tqdm
+numpy
